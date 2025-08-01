@@ -1,19 +1,19 @@
 
 
 
-from flask import Flask
+from flask import Flask, render_template
+import datetime
+
+
+
 
 app = Flask(__name__)
 
 # This function runs for the homepage URL ('/')
 @app.route('/')
-def index():
-    return '<h1>Welcome to the main page! This is not local</h1>'
+def home():
+    return render_template('welcome_test.html')
 
-# This function runs for the '/about' URL
-@app.route('/about')
-def about_page():
-    return '<h2>This is the about page.</h2>'
 
 if __name__ == '__main__':
     app.run(debug=True)
@@ -21,7 +21,6 @@ if __name__ == '__main__':
 
 
 
-print('this is a test')
 
 
 
