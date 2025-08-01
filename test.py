@@ -8,7 +8,7 @@ app = Flask(__name__)
 # This function runs for the homepage URL ('/')
 @app.route('/')
 def index():
-    return '<h1>Welcome to the main page!</h1>'
+    return '<h1>Welcome to the main page! This is not local</h1>'
 
 # This function runs for the '/about' URL
 @app.route('/about')
